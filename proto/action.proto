@@ -1,0 +1,86 @@
+// Copyright 2015 gRPC authors.
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "io.grpc.examples.twitter";
+option java_outer_classname = "TwitterProto";
+
+package tw;
+
+// The greeting service definition.
+service TwitterAction {
+  rpc GetName(Ack) returns (Username) {}
+
+  rpc GetTwitterPage(Username) returns (TwitterPage) {}
+
+  rpc LoginCheck(User) returns (IsTrue) {}
+
+  rpc RegisterCheck(User) returns (IsTrue) {}
+
+  rpc SendTwitte(T_in) returns (IsTrue) {}
+
+  rpc FollowUser(FollowUnfollow) returns (IsTrue) {}
+
+  rpc UnfollowUser(FollowUnfollow) returns (IsTrue) {}
+}
+
+// The request message// repeated means an array
+message Ack {}
+
+message T_in{
+  string username = 1;
+  string content = 2;
+}
+
+message Twitte {
+  T_in message = 1;
+  string time = 2;
+}
+
+message Twitlist {
+  repeated Twitte Twitlists = 1;
+}
+
+message Username {
+  string name = 1;
+}
+
+message User {
+  string UserName = 1;
+  string PassWord = 2;
+}
+
+message Info {
+  User user = 1;
+  Twitlist Posts = 2;
+  repeated string Following = 3;
+}
+
+message FollowUnfollow {
+  string username = 1;
+  string other = 2;
+}
+
+message TwitterPage {
+  string username = 1;
+  repeated string UnFollowed = 2;
+  repeated string Following = 3;
+  repeated string Posts = 4;
+}
+
+message IsTrue {
+  bool isTrue = 1;
+}

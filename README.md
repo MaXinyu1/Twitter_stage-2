@@ -23,7 +23,7 @@ This is the second stage of the project. Different from the stage 1, stage 2 put
 **1. Install thrid-party packages**   
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*go get github.com/gorilla/securecookie*  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*go get github.com/go-sql-driver/mysql/*
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*go get github.com/golang/protobuf*
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*go get github.com/golang/protobuf/*
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*go install github.com/golang/protobuf/protoc-gen-go/*
 
 **2. Clone the project into "/your/path"**  

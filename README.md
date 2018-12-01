@@ -36,9 +36,11 @@ This is the second stage of the project. Different from the stage 1, stage 2 put
 **3. Go into the src directory and run it**  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*cd /your/path/gRPC*  
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*cd /your/path/gRPC/server* *go run twitter_server.go*
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*cd /your/path/gRPC/server* 
+*go run twitter_server.go*
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*cd /your/path/gRPC/client* *go run client.go*
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*cd /your/path/gRPC/client* 
+*go run client.go*
 
 ## Project Structure
 ```bash

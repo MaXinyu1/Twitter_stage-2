@@ -37,20 +37,19 @@ This is the second stage of the project. Different from the stage 1, stage 2 put
 ```bash
 ├── README.md
 ├── github.com
-│   ├── go-sql-driver
-│   └── gorilla 
+│   └── go-sql-driver
+├── google.golang.org
+├── proto
+│   ├── *action.proto
+│   └── *action.pb.go
 └── gRPC
-    ├── web.go     // go run web.go
-    ├── auth       // "login & logout" module
-    │   └── *auth.go
-    ├── action     // "presonal page" module
-    │   ├── *action.go
-    │   └── *page.go
-    ├── storage    // processing data with database, insert, delete, update
-    │   └── *storage.go
-    ├── cookie     // parameter pass, session
-    │   └── *cookie.go
-    └── show       // html and css templates
+    ├── server       // go run twitter_server.go
+    │   └── *twitter_server.go
+    ├── client       // go run twitter_server.go
+    │   ├── *client.go
+    │   └── auth
+    │       └── *auth.go
+    └── show         // html and css templates
         ├── *.html
         ├── css
         └── js

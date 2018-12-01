@@ -21,7 +21,8 @@ This is the second stage of the project. Different from the stage 1, stage 2 put
 
 ## Instructions To Run
 **1. Install thrid-party packages**   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*go get github.com/gorilla/securecookie*  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*go get github.com/gorilla/securecookie*
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*go get github.com/go-sql-driver/mysql/*
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*go get github.com/golang/protobuf*
@@ -33,6 +34,7 @@ This is the second stage of the project. Different from the stage 1, stage 2 put
 
 **3. Go into the src directory and run it**  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*cd /your/path/awesomeProject*  
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*go run web.go*
 
 ## Project Structure

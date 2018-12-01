@@ -7,7 +7,7 @@ Built for 2018 fall distributed system course.
 
 It is divided into 3 stages:
 - [ ] Build simple web application with database
-- [x] Split off backend into a seperate service(using gPRC)
+- [x] Split off backend into a seperate service (using gPRC)
 - [ ] Bind the service with a distributed system
 This is the second stage of the project. Different from the stage 1, stage 2 put all the data processing functions into the server. So that client don't have to process any data locally.
 

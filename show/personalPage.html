@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>personal Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bg.css">
+
+</head>
+
+<body>
+<div class="container">
+
+    <div class="container">
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+
+
+        <div class="row clearfix">
+            <div class="col-md-4 column">
+                <h3>
+                    Welcome back!
+                </h3>
+                <dl>
+                    <dt>
+                        Today is <p id="logInfo"></p>
+
+                        <form method="Post">
+                            <input type="submit" value="logout" name="logout">
+                        </form>
+                        <br />
+
+                    </dt>
+                    <dt>
+                        <form method="Post">
+                        <input type="twitte" name="twitte">
+                        <input type="submit" value="Send Twitte" name = "pg">
+                        </form>
+                    </dt>
+                </dl>
+            </div>
+        </div>
+
+
+        <div class="col-md-8 column">
+            <h2>Twitte list:</h2>
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>From &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Content</th>
+                </tr>
+
+
+                {{range .Posts}}
+                <tr>
+                    <th>{{.}}</th>
+                </tr>
+                {{end}}
+
+                </thead>
+
+            </table>
+        </div>
+
+        <div class="col-md-4 column">
+            <br />
+            <br />
+            <br />
+            <br />
+            <h2>Recommend</h2>
+            <table class="table table-striped">
+                <thead>
+                {{range .UnFollowed}}
+                <tr>
+                    <form method="Post">
+                        <tr>
+                        <th>
+                        {{.}}
+                        <th>
+                        <input type="hidden" value={{.}} name="follow">
+                        <input type="submit" value="follow" name="pg">
+                        </th>
+                        </th>
+                        </tr>
+                    </form>
+                </tr>
+                {{end}}
+
+                </thead>
+            </table>
+        </div>
+
+
+        <div class="col-md-4 column">
+            <br />
+            <br />
+            <br />
+            <br />
+            <h2>Following</h2>
+            <table class="table table-striped">
+                <thead>
+                {{range .Following}}
+                    <form method="Post">
+                        <tr>
+                        <th>
+                    {{.}}
+                        <th>
+                        <input type="hidden" value={{.}} name="unfollow">
+                        <input type="submit" value="unfollow" name="pg">
+                        </th>
+                        </th>
+                        </tr>
+                    </form>
+                {{end}}
+                </thead>
+
+
+            </table>
+        </div>
+
+
+        <script language="javascript">
+            function getCurDate()
+            {
+                var d = new Date();
+                var week;
+                switch (d.getDay()){
+                    case 1: week="Monday"; break;
+                    case 2: week="Tuesday"; break;
+                    case 3: week="Wednesday"; break;
+                    case 4: week="Thursday"; break;
+                    case 5: week="Friday"; break;
+                    case 6: week="Saturday"; break;
+                    default: week="Sunday";
+                }
+                var years = d.getFullYear();
+                var month = add_zero(d.getMonth()+1);
+                var days = add_zero(d.getDate());
+                var hours = add_zero(d.getHours());
+                var minutes = add_zero(d.getMinutes());
+                var seconds=add_zero(d.getSeconds());
+                var ndate = years+" "+month+" "+days+" "+hours+":"+minutes+":"+seconds+","+week;
+                var divT=document.getElementById("logInfo");
+                divT.innerHTML= ndate;
+            }
+            function add_zero(temp)
+            {
+                if(temp<10) return "0"+temp;
+                else return temp;
+            }
+            setInterval("getCurDate()",100);
+        </script>
+    </div>
+</div>
+</body>
+</html>

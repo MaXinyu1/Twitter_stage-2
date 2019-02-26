@@ -64,5 +64,5 @@ This is the second stage of the project. Different from the stage 1, stage 2 put
         └── js
 ```
 
-## Team
+## Developer
 - Xinyu Ma (xm546)
